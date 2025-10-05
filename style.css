@@ -12,7 +12,7 @@
 
 :root{
     --lead: #212121;
-    --gold-finger: #F2BD12;
+    --gold-finger: #088178;
     --eye-ball: #FFFDF7;
     --hint-yellow: #FCF1CC;
     --pure-white: #FFF;
@@ -68,6 +68,17 @@ img{
     height: auto;
     margin: auto;
 display: block;
+}
+
+.p-top{
+    padding-top: 10rem;
+}
+
+.text-center{
+    text-align: center;
+}
+.mt-4{
+    margin-top: 4rem;
 }
 
 
@@ -142,7 +153,8 @@ min-height: 14vh;
 
 
 .content,
-.image-container{
+.image-container,
+.service-card{
     flex:1;
     flex-basis: 300px;
 }
@@ -185,6 +197,44 @@ p{
     color: var(--pure-white);
 }
 
+/*section 1*/
+
+h5{
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    color: var(--gold-finger);
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 3.7rem;
+    text-transform: capitalize;
+    color: var(--lead);
+}
+
+h3{
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--lead);
+}
+
+
+.service-card h3{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+}
+
+
+
+
+
+.order-card{
+    background: var(--pure-white);
+}
+.order-card img{
+    width: 15rem;
+}
 
 
 
@@ -222,6 +272,8 @@ p{
 
 /*MEDIA QUERIES*/
 @media screen and (max-width:780px){
+
+    /*for header*/
     .navlist,
      .desktop-action .btn{
         display: none;
@@ -252,6 +304,22 @@ p{
 .mobile-menu-active{
     left: 50%;
     transform: translateX(-50%);
+}
+/* for sections*/
+h1{
+    font-size: 3.6rem;
+}
+.content{
+    padding-top: 3rem;
+}
+.gap-2{
+    gap:1.2rem;
+}
+.gap-4{
+    gap:4rem;
+}
+h2{
+    font-size: 3rem;
 }
 }
 
