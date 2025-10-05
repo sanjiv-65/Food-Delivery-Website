@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Chicken Burger",
+        "price": "₹299",
+        "image": "img/burger.png"
+
+    },
+    {
+        "id": 2,
+        "name": "Veg Pizza",
+        "price": "₹299",
+        "image": "img/pizza.png"
+
+    },
+    {
+        "id": 3,
+        "name": "Veggie Pizza",
+        "price": "₹299",
+        "image": "img/pizza.png"
+
+    },
+    {
+        "id": 4,
+        "name": "Chicken Roll",
+        "price": "₹299",
+        "image": "img/chicken-roll.png"
+
+    },
+    {
+        "id": 5,
+        "name": "Sandwich",
+        "price": "₹299",
+        "image": "img/sandwich.png"
+
+    },
+    {
+        "id": 6,
+        "name": "Chicekn Lasagna",
+        "price": "₹299",
+        "image": "img/lasagna.png"
+
+    },
+    {
+        "id": 7,
+        "name": "Itallian Spaghetti",
+        "price": "₹180",
+        "image": "img/spaghetti.png"
+
+    },
+    {
+        "id": 8,
+        "name": "Spring Roll",
+        "price": "₹150",
+        "image": "img/spring-roll.png"
+
+    }
+]
