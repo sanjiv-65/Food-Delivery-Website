@@ -276,7 +276,7 @@ h4{
 .cart-tab{
     background: var(--hint-yellow);
     position: fixed;
-    inset: 0 0 0 auto;
+    inset: 0 -500px 0 auto;
     width: 25rem;
     padding-block: 2rem;
     display: flex;
@@ -284,7 +284,11 @@ h4{
     justify-content: center;
     align-items: center;
     z-index: 99;
-    box-shadow:rgba(0, 0, 0, 0.1) -10px -10xp 20px; 
+    box-shadow:rgba(0, 0, 0, 0.1) -10px -10px 20px; 
+}
+
+.card-tab-active{
+    inset: 0 0 0 auto;
 }
 
 .cart-list{
@@ -331,6 +335,11 @@ h4{
     padding: .2rem .5rem;
 
 }
+
+.cart-list .item:nth-child(even){
+    background: var(--eye-ball);
+}
+
 
 .item .img-container img{
     width: 5rem;
