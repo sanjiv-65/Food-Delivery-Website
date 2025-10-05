@@ -82,6 +82,10 @@ display: block;
 }
 
 
+.mt-one-half{
+    margin-top: .5rem;
+}
+
 
 
 
@@ -230,18 +234,91 @@ h3{
 
 
 .order-card{
+    flex: 1;
+    flex-basis: 300px;
     background: var(--pure-white);
+    padding: 0 1rem 2rem 1rem;
+       border: .1rem solid var(--gold-finger);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px,
+    rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
 }
 .order-card img{
     width: 15rem;
+    filter: drop-shadow(
+        rgba(0, 0, 0, 0.02) 0 10px 10px
+    );
+}
+
+h4{
+    font-size: 1rem;
+    color: var(--lead);
+}
+
+.order-card .price{
+    font-size: 1.7rem;
+    color: var(--gold-finger);
+    padding: 1.3rem 0 2rem;
+
 }
 
 
+.review-container{
+    width: 650px;
+    max-width: 100%;
+}
+
+.swiper {
+      width: 100%;
+      height: 100%;
+      flex:1;
+    }
+
+.profile{
+    width: 4rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    overflow: hidden;
+}
+
+.price img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fa-star{
+    color: gold;
+}
+
+.arrow{
+
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    background: var(--gold-finger);
+    color: var(--lead);
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.app-container{
+    background: var(--hint-yellow);
+    padding: 3rem 6rem;
+    border-radius: 3rem;
+   
+}
 
 
+.app-container .content h2{
+    font-size: 4.5rem;
+}
 
 
+.app-container .image-container img{
+width: 23rem;
 
+}
 
 
 
@@ -321,5 +398,13 @@ h1{
 h2{
     font-size: 3rem;
 }
+
+.app-container{
+    padding: 2.2rem;
+}
+.app-container .content h2{
+    font-size: 3.5rem;
+}
+
 }
 

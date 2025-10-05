@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -96,51 +99,51 @@
 
         <section>
             <div class="wrapper p-top">
-              <div class="text-center">
-                <h5>Our Services</h5>
-                <h2>How does it work?</h2>
-            </div>
-                
-        <div class="flex text-center mt-4 gap-4">
-<div class="service-card">
-    <div class="image-container">
-        <img src="img/easy-to-order.png">
-    </div>
-    <h3>Easy to Order</h3>
-    <p>You only need a few steps in ordering food</p>
-</div>
+                <div class="text-center">
+                    <h5>Our Services</h5>
+                    <h2>How does it work?</h2>
+                </div>
 
-<div class="service-card">
-    <div class="image-container">
-        <img src="img/best-quality.png">
-    </div>
-    <h3>Best Quality</h3>
-    <p>Not only fast for us in quality is also number one</p>
-</div>
+                <div class="flex text-center mt-4 gap-4">
+                    <div class="service-card">
+                        <div class="image-container">
+                            <img src="img/easy-to-order.png">
+                        </div>
+                        <h3>Easy to Order</h3>
+                        <p>You only need a few steps in ordering food</p>
+                    </div>
 
-<div class="service-card">
-    <div class="image-container">
-        <img src="img/fast-delivery.png">
-    </div>
-    <h3>Fast delivery</h3>
-    <p>Delivery that is always ontime even faster</p>
-</div>
+                    <div class="service-card">
+                        <div class="image-container">
+                            <img src="img/best-quality.png">
+                        </div>
+                        <h3>Best Quality</h3>
+                        <p>Not only fast for us in quality is also number one</p>
+                    </div>
 
-        </div>
+                    <div class="service-card">
+                        <div class="image-container">
+                            <img src="img/fast-delivery.png">
+                        </div>
+                        <h3>Fast delivery</h3>
+                        <p>Delivery that is always ontime even faster</p>
+                    </div>
+
+                </div>
 
             </div>
         </section>
 
         <section>
 
-<div class="wrapper p-top"> 
-             <div class="text-center">
-                <h5>Our Menu</h5>
-                <h2>The Most Popular</h2>
-            
-</div>
-<div class="card-list text-center">
-    <div class="order-card">
+            <div class="wrapper p-top">
+                <div class="text-center">
+                    <h5>Our Menu</h5>
+                    <h2>The Most Popular</h2>
+
+                </div>
+                <div class="card-list text-center flex mt-4 gap-2">
+                    <!--<div class="order-card">
         <div class="card-image">
             <img src="img/burger.png">
         </div>
@@ -148,11 +151,133 @@
     <h4 class="price">₹299</h4>
     <a href="#" class="btn">Add to cart</a>
 
-    </div>
+    </div>-->
 
 
-</div>
-</div>  
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrapper p-top flex gap-3">
+                <div class="image-container">
+                    <img src="img/delivery-boy-with-phone.png">
+                </div>
+                <div class="content">
+                    <h5>Our reviews</h5>
+                    <h2>What the say?</h2>
+
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="review-container">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper mt-4">
+                                <div class="swiper-slide">
+                                    <div class="flex gap-2">
+                                        <div class="profile">
+                                            <img src="img/profile1.jpeg">
+                                        </div>
+                                        <div>
+                                            <h4>Sonu Kumar</h4>
+                                            <div class="mt-one-half">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="para">
+                                        Delicious food delivered on time, every time.
+                                        The website is smooth, easy to navigate, and reliable.
+                                        A perfect blend of speed, flavor, and convenience.
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex gap-2">
+                                        <div class="profile">
+                                            <img src="img/profile2.jpeg">
+                                        </div>
+                                        <div>
+                                            <h4>SHalini Das</h4>
+                                            <div class="mt-one-half">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="para">
+                                        QuickBite makes food ordering so simple! 🍔
+                                        Fast delivery, fresh meals, and zero hassle — just pure taste.
+                                        Definitely my go-to for late-night cravings!
+                                    </p>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="flex gap-2">
+                                        <div class="profile">
+                                            <img src="img/profile3.jpeg">
+                                        </div>
+                                        <div>
+                                            <h4>Munna Kumar</h4>
+                                            <div class="mt-one-half">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="para">
+                                        Cravings hit? QuickBite’s got your back!
+                                        Hot, tasty, and lightning-fast delivery right to your door.
+                                        Ordering food has never been this fun or easy!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex between">
+                                <a href="#" class="arrow" id="prev">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+                                <a href="#" class="arrow" id="next">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="wrapper p-top">
+               <div class="app-container flex between"> 
+                <div class="image-container">
+                    <img src="img/mobile-app.png">
+                </div>
+
+                <div class="content">
+                    <h5>Our Application</h5>
+                    <h2>
+                        Simple Way to<br> Order Our Food
+                    </h2>
+                    <p class="para">Discover food wherever and whenever and get your food delivery quickly</p>
+                    <a href="#" class="btn">Get the App</a>
+                </div>
+            </div>
+            </div>
         </section>
     </main>
 
@@ -160,6 +285,10 @@
 
     </footer>
 
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </body>
 
 </html>
