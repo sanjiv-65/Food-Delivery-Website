@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Your Brand</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Your existing CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto Condensed", sans-serif;
+        }
+
+        :root{
+            --lead: #212121;
+            --gold-finger: #088178;
+            --eye-ball: #FFFDF7;
+            --hint-yellow: #FCF1CC;
+            --pure-white: #FFF;
+        }
+
+        body{
+            background: var(--eye-ball);
+        }
+
+        a{
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: var(--lead);
+        }
+
+        .flex{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        .between{
+            justify-content: space-between;
+        }
+
+        .gap-2{
+            gap: 2rem;
+        }
+
+        .gap-3{
+            gap: 3rem;
+        }
+
+        .wrapper{
+            max-width: 1400px;
+            margin: auto;
+            padding-inline: 1.5rem;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+            display: block;
+        }
+
+        .p-top{
+            padding-top: 10rem;
+        }
+
+        .text-center{
+            text-align: center;
+        }
+        .mt-4{
+            margin-top: 4rem;
+        }
+
+        .mt-one-half{
+            margin-top: .5rem;
+        }
+
+        .m-auto{
+            margin: auto;
+        }
+
+        .mt-half{
+            margin-top: 1.5rem;
+        }
+
+        .navbar{
+            min-height: 14vh;
+        }
+
+        .logo{
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gold-finger);
+        }
+
+        .btn{
+            display: inline-block;
+            padding: .9rem 2rem;
+            background: var(--gold-finger);
+            border-radius: 1rem;
+            font-size: 1.1rem;
+            color: var(--pure-white);
+            box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
+            transition: .3s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            background: var(--lead);
+        }
+
+        .cart-icon{
+            color: var(--lead);
+            font-size: 1.3rem;
+            position: relative;
+        }
+
+        .cart-icon .cart-value{
+            position: absolute;
+            top: 50%;
+            right: -10px;
+            font-size: .85rem;
+            width: 20px;
+            aspect-ratio: 1;
+            border-radius: 100vw;
+            background: var(--gold-finger);
+            color: var(--lead);
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .desktop-action .hamburger{
+            font-size: 1.5rem;
+            display: none;
+        }
+
+        .mobile-menu{
+            display: none;
+        }
+
+        h1{
+            font-size: 5.6vw;
+            color: var(--lead);
+        }
+
+        h1 span{
+            color: var(--gold-finger);
+        }
+
+        p{
+            font-size: 1.25rem;
+            color: gray;
+            line-height: 1.8rem;
+            font-weight: 400;
+        }
+
+        .para{
+            margin-block: 2rem;
+            max-width: 550px;
+        }
+
+        .social-icon{
+            background: var(--hint-yellow);
+            width: 3rem;
+            aspect-ratio: 1;
+            border-radius: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 3rem;
+            box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
+            transition: .3s ease-in-out;
+        }
+
+        .social-icon:hover{
+            background: var(--lead);
+            color: var(--pure-white);
+        }
+
+        h5{
+            font-size: 1.2rem;
+            letter-spacing: .2rem;
+            color: var(--gold-finger);
+            text-transform: uppercase;
+        }
+
+        h2{
+            font-size: 3.7rem;
+            text-transform: capitalize;
+            color: var(--lead);
+        }
+
+        h3{
+            font-size: 2rem;
+            text-transform: capitalize;
+            color: var(--lead);
+        }
+
+        h4{
+            font-size: 1rem;
+            color: var(--lead);
+        }
+
+        /* Contact Page Specific Styles */
+        .contact-section {
+            padding: 6rem 0 4rem;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-card {
+            background: var(--pure-white);
+            padding: 2rem;
+            border-radius: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px,
+            rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+            margin-bottom: 2rem;
+            border: .1rem solid var(--hint-yellow);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 1.5rem;
+            color: var(--gold-finger);
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            background: var(--hint-yellow);
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--gold-finger);
+        }
+
+        .contact-details h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-details p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--lead);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 1rem;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold-finger);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .map-container {
+            margin-top: 4rem;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: rgba(0, 0, 0, 0.1) 0 5px 15px;
+        }
+
+        .map-placeholder {
+            background: var(--hint-yellow);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--lead);
+           
+        }
+        .map{
+            width: 100%;
+            height: 400px;
+            
+            border-radius: 2rem;
+            overflow: hidden;
+ 
+           
+        }
+
+        /* Footer Styles */
+        .footer-container{
+            margin-top: 6rem;
+            padding-block: 4rem;
+            background: var(--hint-yellow);
+        }
+
+        .footer-container .flex{
+            align-items: flex-start;
+        }
+
+        .footer-wrapper{
+            flex:1;
+            flex-basis: 150px;
+        }
+
+        .footer-wrapper:nth-child(1){
+            flex: 2;
+            flex-basis: 300px;
+        }
+
+        .footer-wrapper .social-icon{
+            background: var(--pure-white);
+        }
+
+        .footer-wrapper .social-icon:hover{
+            background: var(--lead);
+            color: var(--pure-white);
+        }
+
+        .footer-link{
+            color: gray;
+            font-size: 1.1rem;
+            transition: .3s ease-in-out;
+        }
+
+        .footer-link:hover{
+            color: var(--lead);
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 780px) {
+            .navlist,
+            .desktop-action .btn{
+                display: none;
+            }
+            .desktop-action .hamburger{
+                display: block;
+            }
+            .mobile-menu{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                position: absolute;
+                top: 20%;
+                left: -100%;
+                transform: translateX(-50%);
+                width: 20rem;
+                padding: 2rem;
+                background: var(--pure-white);
+                border: .1rem solid var(--gold-finger);
+                border-radius: 2rem;
+                box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px,
+                rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+                transition:all .5s ease-in-out;
+            }
+
+            .mobile-menu-active{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            h1{
+                font-size: 3.6rem;
+            }
+            
+            h2{
+                font-size: 3rem;
+            }
+
+            .contact-section {
+                padding: 4rem 0 2rem;
+            }
+
+            .contact-container {
+                gap: 2rem;
+            }
+
+            .contact-info, .contact-form {
+                min-width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            .contact-method {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-icon {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+   <header>
+        <nav class="navbar flex between wrapper">
+            <a href="#" class="logo">QuickBite</a>
+            <!--desktop menu-->
+            <ul class="navlist flex gap-3">
+                <li><a  href="index.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+                <li><a class="active" href="contact.html">Contacts</a></li>
+            </ul>
+            <div class="desktop-action flex gap-2">
+                <a href="#" class="cart-icon">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    <span class="cart-value">0</span>
+                </a>
+                <a href="#" class="btn">
+                    Sign in
+                    &nbsp <!--this is the extra space in the text and the icon-->
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </a>
+
+                <a href="#" class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+
+            </div>
+            <!--mobile menu-->
+            <ul class="mobile-menu">
+                <li><a  href="index.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+                <li><a class="active" href="contact.html">Contacts</a></li>
+                <li><a href="#" class="btn">
+                        Sign in
+                        &nbsp <!--this is the extra space in the text and the icon-->
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="wrapper">
+            <div class="text-center">
+                <h5>Get In Touch</h5>
+                <h2>Contact Us</h2>
+                <p class="para m-auto">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Our Location</h4>
+                                <p>751024 Bhubaneswar, patia<br>Odisha, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone Number</h4>
+                                <p>+91 7735107105</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Address</h4>
+                                <p>example@quickbite.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3>Follow Us</h3>
+                        <div class="flex gap-2 mt-half">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="contact-card">
+                        <h3>Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" class="form-control" placeholder="What is this regarding?" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" placeholder="Your message here..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                         <iframe class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119066.54814584154!2d85.73999212131555!3d20.296059384116213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909d2d5170aa5%3A0xfc580e2b68b33fa8!2sBhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="flex wrapper gap-4">
+                <div class="footer-wrapper">
+                    <a href="#" class="logo">QuickBite</a>
+                    <p class="mt-half">
+                    <p>We will fill your tummy with delicious<br> food with fast delivery</p>
+                    </p>
+                    <div class="flex gap-2 mt-half">
+
+
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" class="social-icon">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="footer-wrapper">
+                    <li>
+                        <h4>Our Menu</h4>
+                    </li>
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">Special</a>
+                    </li>
+
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">Popular</a>
+                    </li>
+
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">Category</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-wrapper">
+                    <li>
+                        <h4>Company</h4>
+                    </li>
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">Why QickBite</a>
+                    </li>
+
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">Partner with us</a>
+                    </li>
+
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">Category</a>
+                    </li>
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">About us</a>
+                    </li>
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">FAQ's</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-wrapper">
+                    <li>
+                        <h4>Support</h4>
+                    </li>
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">Account</a>
+                    </li>
+
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">Support Center</a>
+                    </li>
+
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">Feedback</a>
+                    </li>
+
+                    <li class="mt-half">
+                        <a href="#" class="footer-link">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('mobile-menu-active');
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

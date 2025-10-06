@@ -21,11 +21,11 @@
             <a href="#" class="logo">QuickBite</a>
             <!--desktop menu-->
             <ul class="navlist flex gap-3">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+                <li><a href="contact.html">Contacts</a></li>
             </ul>
             <div class="desktop-action flex gap-2">
                 <a href="#" class="cart-icon">
@@ -45,11 +45,11 @@
             </div>
             <!--mobile menu-->
             <ul class="mobile-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Aboutus.html">About us</a></li>
+                <li><a href="contact.html">Contacts</a></li>
                 <li><a href="#" class="btn">
                         Sign in
                         &nbsp <!--this is the extra space in the text and the icon-->
@@ -426,7 +426,21 @@
         </div>
     </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop(); // e.g. "Aboutus.html"
+    const navLinks = document.querySelectorAll('.navlist a, .mobile-menu a');
 
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});
+</>
+</script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
